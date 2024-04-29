@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIRBNB</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <section class="main-header">
+    <header class="header">
+        <!-- navbar -->
+        <div class="logo">
+            <img src="image/airbnb-logo.png" alt="">
+        </div>
+        <div class="options-container">
+            <h4 class="stays">Stays</h4>
+            <h4 class="stays">Experiences</h4>
+            <h4 class="stays">Online Experiences</h4>
+        </div>
+        <div class="profile-container">
+            <h4>Airbnb your home</h4>
+           <a href=""> <i class="fa fa-globe globe" ></i></a>
+           <button class="profile-icon">
+            <i class="fa fa-bars"></i>
+            <i class="fa fa-user"></i>
+           </button>
+        </div>
+    </header>
+    
+    <!-- category section  -->
+    <form class="search"> 
+        <div class="search-inputs">
+          <label for="location"> 
+            <div class="label">Location</div>
+            <input name="location" id="location" placeholder="Where are you going?"/>
+          </label>
+          
+        </div>
+        <div class="search-inputs">
+          <label for="check-in"> 
+            <div class="label">Check in</div>
+            <input name="check-in" id="check-in" placeholder="Add dates"/>
+          </label>
+        </div>
+        <div class="search-inputs">
+          <label for="check-out"> 
+            <div class="label">Check out</div>
+            <input name="check-out" id="check-out" placeholder="Add dates"/>
+          </label>
+        </div>
+        <div class="search-inputs">
+          <label for="guests"> 
+            <div class="label">Guests</div>
+            <input name="guests" id="guests" placeholder="Add dates"/>
+          </label>
+        </div>
+        <div class="search-button">
+          <button onclick="preventDefault()"><i class="fa fa-search"></i></button>
+        </div>
+      </form>
+
+      <!-- places to stay -->
+      <div class="filter-section">
+        <div class="filter-icons">
+          <div class="left-button">
+            <a href="#" onclick="scrollToLeft()">
+                <i class="fa fa-arrow-left left-button-filter"></i>
+            </a>
+            
+          </div>
+          <div class="icons">
+            <div class="icon-container imgicons">
+                <a href="#">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                </a> 
+              <h6>Cabins</h6>
+            </div>
+            <div class="icon-container imgicons">
+                <a href="#">
+                    <i class="fa fa-bed" aria-hidden="true"></i>
+                </a>                
+              <h6>Rooms</h6>
+            </div>
+            <div class="icon-container imgicons">
+                <a href="#">
+                    <i class="fa fa-tree" aria-hidden="true"></i>
+                </a>  
+              <h6>Farms</h6>
+            </div>
+            <div class="icon-container imgicons">
+                <a href="#">
+                    <i class="fa fa-castle"></i>
+                </a>  
+              <h6>Mansions</h6>
+            </div>
+            <div class="icon-container imgicons">
+                <a href="#">
+                    <i class="fa fa-keyboard-o" aria-hidden="true"></i>
+                </a>
+              <h6>Grand-pianons</h6>
+            </div>
+            <div class="icon-container imgicons">
+                <a href="#">
+                    <i class="fa fa-ship" aria-hidden="true"></i>
+                </a>
+                
+              <h6>Boats</h6>
+            </div>
+            <div class="icon-container imgicons">
+              <img src="./icons/play.jpg" alt="play" />
+              <h6>Play</h6>
+            </div>
+            <div class="icon-container imgicons">
+              <img src="./icons/Caves.jpg" alt="cave" />
+              <h6>Caves</h6>
+            </div>
+            <div class="icon-container imgicons">
+              <img src="./icons/desert.jpg" alt="desert" />
+              <h6>Deserts</h6>
+            </div>
+            <div class="icon-container imgicons">
+              <img src="./icons/beachfront.jpg" alt="houseboat" />
+              <h6>Beachfront</h6>
+            </div>
+            <div class="icon-container imgicons">
+              <img src="./icons/New.jpg" alt="new" />
+              <h6>New</h6>
+            </div>
+            <div class="icon-container imgicons">
+              <img src="./icons/Trending.jpg" alt="trending" />
+              <h6>Trending</h6>
+            </div>
+            <div class="icon-container imgicons">
+              <img src="./icons/CAmping.jpg" alt="camping" />
+              <h6>Camping</h6>
+            </div>
+            <div class="icon-container imgicons">
+              <img src="./icons/towers.jpg" alt="tower" />
+              <h6>Tower</h6>
+            </div>
+            <div class="icon-container imgicons">
+              <img src="./icons/golfing.jpg" alt="golfing.png" />
+              <h6>Golf</h6>
+            </div>
+            <div class="icon-container imgicons">
+              <img src="./icons/Lake.jpg" alt="lake" />
+              <h6>Lake</h6>
+            </div>
+            <div class="icon-container imgicons">
+              <img src="./icons/skiing.jpg" alt="sking" />
+              <h6>Sking</h6>
+            </div>
+            <div class="icon-container imgicons">
+              <img src="./icons/Surfing.jpg" alt="surf" />
+              <h6>Surfing</h6>
+            </div>
+            <div class="icon-container imgicons">
+              <img src="./icons/Beach.jpg" alt="Beach" />
+              <h6>Beach</h6>
+            </div>
+            <div class="icon-container imgicons">
+              <img src="./icons/yurts.jpg" alt="yurt" />
+              <h6>Yurts</h6>
+            </div>
+            <div class="icon-container imgicons">
+              <img src="./icons/Campers.jpg" alt="camper-van" />
+              <h6>CampVan</h6>
+            </div>
+            <div class="icon-container imgicons">
+              <img src="./icons/hanoks.jpg" alt="hanok.png" />
+              <h6>Hanok</h6>
+            </div>
+            <div class="icon-container imgicons">
+              <img src="./icons/adapted.jpg" alt="mansion.png" />
+              <h6>Adapted</h6>
+            </div>
+            <div class="icon-container imgicons">
+              <img src="./icons/ryokans.jpg" alt="ryokan.png" />
+              <h6>Ryokan</h6>
+            </div>
+            <div class="icon-container">
+              <img src="/icons/Amazingpools.jpg" alt="" style="display: none" />
+              <!-- <h6>Castles</h6> -->
+            </div>
+          </div>
+          <div class="right-button">
+
+            <a href="#" onclick="scrollToRight()">
+                <i class="fa fa-arrow-right right-button-filter"></i>
+            </a>
+            
+          </div>
+        </div>
+        <div class="filter hide-filter">
+            <a href="#">
+                <i class="fa fa-filter"></i>
+            </a>
+            
+          <h6>Filters</h6>
+        </div>
+        <div class="custom-control">
+          <p>Display total before taxes</p>
+          <input type="checkbox" id="check" />
+          <label for="check" class="button"></label>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- hero section -->
+    <div class="hero-section">
+        <div class="empty-hero-section">
+        
+        </div>
+        <div class="hero-section-container">
+          <div class="hero-section-items">
+            <div class="hero-section-item-img-container">
+              
+              <img src="./images/1.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <button class="guest">Guest favourite</button>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <!-- </div> -->
+              <h6 onclick="show()" id="house-name">Istanbul, Turkey</h6>
+              <p id="house-distance">4,261 kilometers away</p>
+              <p id="house-availability">May 1 – 6</p>
+              <h6 id="house-cost">$122 night</h6>
+            </div>
+            <div class="hero-section-item-img-container">
+              <img src="./images/9.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <button class="guest">Guest favourite</button>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Stanfors, South Africa</h6>
+              <p id="house-distance">4,851 kilometers away</p>
+              <p id="house-availability">May 19 – 24</p>
+              <h6 id="house-cost">$143 night</h6>
+            </div>
+            <div class="hero-section-item-img-container">
+              <img src="./images/8.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Dullstroom, South Africa</h6>
+              <p id="house-distance">4,571 kilometers away</p>
+              <p id="house-availability">May 19 – 24</p>
+              <h6 id="house-cost">$137 night</h6>
+            </div>
+            <div class="hero-section-item-img-container">
+              <img src="./images/6.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <button class="guest">Guest favourite</button>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Overberg District Municipality</h6>
+              <p id="house-distance">4,863 kilometers away</p>
+              <p id="house-availability">May 6 – 11</p>
+              <h6 id="house-cost">$261 night</h6>
+            </div>
+          </div>
+          <div class="hero-section-items">
+            <div class="hero-section-item-img-container">
+              <img src="./images/10.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Inlice, Turkey</h6>
+              <p id="house-distance">4,254 kilometers away</p>
+              <p id="house-availability">May 1 – 6</p>
+              <h6 id="house-cost">$230 night</h6>
+            </div>
+            <div class="hero-section-item-img-container">
+              <img src="./images/13.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Dalaman, Turkey</h6>
+              <p id="house-distance">4,241 kilometers away</p>
+              <p id="house-availability">May 5 – 10</p>
+              <h6 id="house-cost">$169 night</h6>
+            </div>
+            <div class="hero-section-item-img-container">
+              <img src="./images/16.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <button class="guest">Guest favourite</button>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Gqeberha, South Africa</h6>
+              <p id="house-distance">5,054 kilometers away</p>
+              <p id="house-availability">May 1 – 6</p>
+              <h6 id="house-cost">$96 night</h6>
+            </div>
+            <div class="hero-section-item-img-container">
+              <img src="./images/19.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Gita, Israel</h6>
+              <p id="house-distance">4,416 kilometers away</p>
+              <p id="house-availability">Jun 1 – 6</p>
+              <h6 id="house-cost">$280 night</h6>
+            </div>
+          </div>
+          <div class="hero-section-items">
+            <div class="hero-section-item-img-container">
+              <img src="./images/21.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">The Crags, South Africa</h6>
+              <p id="house-distance">4,969 kilometers away</p>
+              <p id="house-availability">May 1 – 6</p>
+              <h6 id="house-cost">$90 night</h6>
+            </div>
+            <div class="hero-section-item-img-container">
+              <img src="./images/z.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <button class="guest">Guest favourite</button>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Ponta mamoli, Mozambique</h6>
+              <p id="house-distance">4,869 kilometers away</p>
+              <p id="house-availability">May 13 – 18</p>
+              <h6 id="house-cost">$551 night</h6>
+            </div>
+            <div class="hero-section-item-img-container">
+              <img src="./images/25.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <button class="guest">Guest favourite</button>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Cape Town, South Africa</h6>
+              <p id="house-distance">4,776 kilometers away</p>
+              <p id="house-availability">May 1 – 6</p>
+              <h6 id="house-cost">$198 night</h6>
+            </div>
+            <div class="hero-section-item-img-container">
+              <img src="./images/27.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Oribi Gorge, South Africa</h6>
+              <p id="house-distance">5025 kilometers away</p>
+              <p id="house-availability">May 5 – 10</p>
+              <h6 id="house-cost">$249 night</h6>
+            </div>
+          </div>
+          <div class="hero-section-items">
+            <div class="hero-section-item-img-container">
+              <img src="./images/22.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <button class="guest">Guest favourite</button>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Istanbul, Turkey</h6>
+              <p id="house-distance">4,261 kilometers away</p>
+              <p id="house-availability">May 1 – 6</p>
+              <h6 id="house-cost">$122 night</h6>
+            </div>
+            <div class="hero-section-item-img-container">
+              <img src="./images/34.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <button class="guest">Guest favourite</button>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Fethiye, Turkey</h6>
+              <p id="house-distance">4,241 kilometers away</p>
+              <p id="house-availability">May 1 – 6</p>
+              <h6 id="house-cost">$175 night</h6>
+            </div>
+            <div class="hero-section-item-img-container">
+              <img src="./images/24.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Konyaalti, Turkey</h6>
+              <p id="house-distance">4,345 kilometers away</p>
+              <p id="house-availability">May 1 – 6</p>
+              <h6 id="house-cost">$64 night</h6>
+            </div>
+            <div class="hero-section-item-img-container">
+              <img src="./images/28.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <button class="guest">Guest favourite</button>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Kas, Turkey</h6>
+              <p id="house-distance">4,255 kilometers away</p>
+              <p id="house-availability">May 1 – 6</p>
+              <h6 id="house-cost">$106 night</h6>
+            </div>
+          </div>
+          <div class="hero-section-items">
+            <div class="hero-section-item-img-container">
+              <img src="./images/30.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Yaniklar, Turkey</h6>
+              <p id="house-distance">4,256 kilometers away</p>
+              <p id="house-availability">May 1 – 6</p>
+              <h6 id="house-cost">$97 night</h6>
+            </div>
+            <div class="hero-section-item-img-container">
+              <img src="./images/31.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <button class="guest">Guest favourite</button>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Tarifa, Spain</h6>
+              <p id="house-distance">3,422 kilometers away</p>
+              <p id="house-availability">Jun 9 – 14</p>
+              <h6 id="house-cost">$111 night</h6>
+            </div>
+            <div class="hero-section-item-img-container">
+              <img src="./images/35.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <button class="guest">Guest favourite</button>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Velez-Malaga, Spain</h6>
+              <p id="house-distance">3,453 kilometers away</p>
+              <p id="house-availability">Sep 25 – Oct 2</p>
+              <h6 id="house-cost">$120 night</h6>
+            </div>
+            <div class="hero-section-item-img-container">
+              <img src="./images/7.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <button class="guest">Guest favourite</button>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Ghazoua, Morocco</h6>
+              <p id="house-distance">3,097 kilometers away</p>
+              <p id="house-availability">May 9 – 14</p>
+              <h6 id="house-cost">$169 night</h6>
+            </div>
+          </div>
+          <div class="hero-section-items">
+            <div class="hero-section-item-img-container">
+              <img src="./images/38.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Aviel, Israel</h6>
+              <p id="house-distance">4,368 kilometers away</p>
+              <p id="house-availability">Jun 1 – 6</p>
+              <h6 id="house-cost">$303 night</h6>
+            </div>
+            <div class="hero-section-item-img-container">
+              <img src="./images/11.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <button class="guest">Guest favourite</button>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Candir, Turkey</h6>
+              <p id="house-distance">4,236 kilometers away</p>
+              <p id="house-availability">May 5 – 10</p>
+              <h6 id="house-cost">$63 night</h6>
+            </div>
+            <div class="hero-section-item-img-container">
+              <img src="./images/36.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Kas, Turkey</h6>
+              <p id="house-distance">4,246 kilometers away</p>
+              <p id="house-availability">May 15 – 20</p>
+              <h6 id="house-cost">$105 night</h6>
+            </div>
+            <div class="hero-section-item-img-container">
+              <img src="./images/39.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <button class="guest">Guest favourite</button>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Istanbul, Turkey</h6>
+              <p id="house-distance">4,261 kilometers away</p>
+              <p id="house-availability">May 10 – 15</p>
+              <h6 id="house-cost">$163 night</h6>
+            </div>
+          </div>
+          <div class="hero-section-items">
+            <div class="hero-section-item-img-container">
+              <img src="./images/a.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <button class="guest">Guest favourite</button>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Saribelen, Turkey</h6>
+              <p id="house-distance">4,241 kilometers away</p>
+              <p id="house-availability">May 1 – 6</p>
+              <h6 id="house-cost">$108 night</h6>
+            </div>
+            <div class="hero-section-item-img-container">
+              <img src="./images/b.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <button class="guest">Guest favourite</button>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Anatalya, Turkey</h6>
+              <p id="house-distance">4,281 kilometers away</p>
+              <p id="house-availability">May 1 – 6</p>
+              <h6 id="house-cost">$106 night</h6>
+            </div>
+            <div class="hero-section-item-img-container">
+              <img src="./images/c.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <button class="guest">Guest favourite</button>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">El Cuervo, Spain</h6>
+              <p id="house-distance">3,515 kilometers away</p>
+              <p id="house-availability">May 1 – 6</p>
+              <h6 id="house-cost">$162 night</h6>
+            </div>
+            <div class="hero-section-item-img-container">
+              <img src="./images/d.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <button class="guest">Guest favourite</button>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Seydikemer, Turkey</h6>
+              <p id="house-distance">4,232 kilometers away</p>
+              <p id="house-availability">May 1 – 6</p>
+              <h6 id="house-cost">$108 night</h6>
+            </div>
+          </div>
+          <div class="hero-section-items">
+            <div class="hero-section-item-img-container">
+              <img src="./images/e.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Istanbul, Turkey</h6>
+              <p id="house-distance">4,261 kilometers away</p>
+              <p id="house-availability">May 1 – 6</p>
+              <h6 id="house-cost">$122 night</h6>
+            </div>
+            <div class="hero-section-item-img-container">
+              <img src="./images/q.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <button class="guest">Guest favourite</button>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Inlice, Turkey</h6>
+              <p id="house-distance">4,254 kilometers away</p>
+              <p id="house-availability">May 1 – 6</p>
+              <h6 id="house-cost">$230 night</h6>
+            </div>
+            <div class="hero-section-item-img-container">
+              <img src="./images/g.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Gourri, Cyprus</h6>
+              <p id="house-distance">4,394 kilometers away</p>
+              <p id="house-availability">May 1 – 6</p>
+              <h6 id="house-cost">$241 night</h6>
+            </div>
+            <div class="hero-section-item-img-container">
+              <img src="./images/h.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Istanbul, Turkey</h6>
+              <p id="house-distance">4,261 kilometers away</p>
+              <p id="house-availability">May 1 – 6</p>
+              <h6 id="house-cost">$122 night</h6>
+            </div>
+          </div>
+          <div class="hero-section-items">
+            <div class="hero-section-item-img-container">
+              <img src="./images/i.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Saribelen, Turkey</h6>
+              <p id="house-distance">4,261 kilometers away</p>
+              <p id="house-availability">May 1 – 6</p>
+              <h6 id="house-cost">$108 night</h6>
+            </div>
+            <div class="hero-section-item-img-container">
+              <img src="./images/j.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <button class="guest">Guest favourite</button>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Fethiye, Turkey</h6>
+              <p id="house-distance">4,251 kilometers away</p>
+              <p id="house-availability">May 1 – 6</p>
+              <h6 id="house-cost">$122 night</h6>
+            </div>
+            <div class="hero-section-item-img-container">
+              <img src="./images/r.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <button class="guest">Guest favourite</button>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Yaniklar, Turkey</h6>
+              <p id="house-distance">4,256 kilometers away</p>
+              <p id="house-availability">May 1 – 6</p>
+              <h6 id="house-cost">$124 night</h6>
+            </div>
+            <div class="hero-section-item-img-container">
+              <img src="./images/l.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <button class="guest">Guest favourite</button>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Ortaca, Turkey</h6>
+              <p id="house-distance">4,239 kilometers away</p>
+              <p id="house-availability">May 1 – 6</p>
+              <h6 id="house-cost">$123 night</h6>
+            </div>
+          </div>
+          <div class="hero-section-items">
+            <div class="hero-section-item-img-container">
+              <img src="./images/m.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <button class="guest">Guest favourite</button>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Tarifa, Turkey</h6>
+              <p id="house-distance">4,261 kilometers away</p>
+              <p id="house-availability">May 4 – 11</p>
+              <h6 id="house-cost">$222 night</h6>
+            </div>
+            <div class="hero-section-item-img-container">
+              <img src="./images/n.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <button class="guest">Guest favourite</button>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Istanbul, Turkey</h6>
+              <p id="house-distance">4,261 kilometers away</p>
+              <p id="house-availability">May 1 – 6</p>
+              <h6 id="house-cost">$122 night</h6>
+            </div>
+            <div class="hero-section-item-img-container">
+              <img src="./images/o.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <button class="guest">Guest favourite</button>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Tarifa, Spain</h6>
+              <p id="house-distance">3,421 kilometers away</p>
+              <p id="house-availability">Jun 9 – 14</p>
+              <h6 id="house-cost">$111 night</h6>
+            </div>
+            <div class="hero-section-item-img-container">
+              <img src="./images/p.png" alt="" id="house-image" />
+              <div class="heart"></div>
+              <button class="guest">Guest favourite</button>
+              <div class="book-cover">
+                <div class="book">
+                  <div class="cover"></div>
+                </div>
+              </div>
+              <h6 id="house-name">Istanbul, Turkey</h6>
+              <p id="house-distance">4,261 kilometers away</p>
+              <p id="house-availability">May 1 – 6</p>
+              <h6 id="house-cost">$148 night</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- map -->
+
+  <div class="map-container">
+      <h5>Show map</h5>
+      <a
+        href="https://www.bing.com/maps?q=india+location+map&FORM=HDRSC6&cp=23.427397%7E79.44254&lvl=4.6"
+      >
+        <img src="icons/map.svg" alt="map" />
+      </a>
+    </div>
+
+    <div class="show-more">
+      <p>Continue exploring Luxe homes</p>
+      <button>Show more</button>
+    </div>
+
+    <!-- footer -->
+    
+    <footer>
+      <div class="footer-container">
+        <h6>Inspiration for future getaways</h6>
+        <div class="footer-box">
+          <div class="top-text"><p>Popular</p></div>
+          <div class="top-text"><p>Arts & culture</p></div>
+          <div class="top-text"><p>Outdoors</p></div>
+          <div class="top-text"><p>Mountains</p></div>
+          <div class="top-text"><p>Beach</p></div>
+          <div class="top-text"><p>Unique stays</p></div>
+          <div class="top-text"><p>Categories</p></div>
+          <div class="top-text"><p>Things to do</p></div>
+          <div class="top-text"><p>Travel tips & inspiration</p></div>
+          <div class="top-text"><p>Airbnb-friendly apartment</p></div>
+        </div>
+
+        <div class="footer-box-middle">
+          <div class="footer-box2">
+            <div class="middle-text">
+              <h5>Canmore</h5>
+              <p>Chalet rentals</p>
+            </div>
+            <div class="middle-text">
+              <h5>Tucson</h5>
+              <p>Mansion rentals</p>
+            </div>
+            <div class="middle-text">
+              <h5>Anaheim</h5>
+              <p>Family-friendly rentals</p>
+            </div>
+          </div>
+          <div class="footer-box2">
+            <div class="middle-text">
+              <h5>Benalmadena</h5>
+              <p>Apartment rentals</p>
+            </div>
+            <div class="middle-text">
+              <h5>Jasper</h5>
+              <p>Vacation rentals</p>
+            </div>
+            <div class="middle-text">
+              <h5>Monterey</h5>
+              <p>Apartment rentals</p>
+            </div>
+          </div>
+          <div class="footer-box2">
+            <div class="middle-text">
+              <h5>Marbella</h5>
+              <p>House rentals</p>
+            </div>
+            <div class="middle-text">
+              <h5>Mountain View</h5>
+              <p>House rentals</p>
+            </div>
+            <div class="middle-text">
+              <h5>Paso Robies</h5>
+              <p>House rentals</p>
+            </div>
+          </div>
+          <div class="footer-box2">
+            <div class="middle-text">
+              <h5>Mijas</h5>
+              <p>Vaction rentals</p>
+            </div>
+            <div class="middle-text">
+              <h5>Devonport</h5>
+              <p>Cottage rentals</p>
+            </div>
+            <div class="middle-text">
+              <h5>Santa Barbara</h5>
+              <p>Cottage rentals</p>
+            </div>
+          </div>
+          <div class="footer-box2">
+            <div class="middle-text">
+              <h5>Prescott</h5>
+              <p>Pet-friendly rentals</p>
+            </div>
+            <div class="middle-text">
+              <h5>Mallacoota</h5>
+              <p>Vacation rentals</p>
+            </div>
+            <div class="middle-text">
+              <h5>Sonoma</h5>
+              <p>Beach house rentals</p>
+            </div>
+          </div>
+          <div class="footer-box2">
+            <div class="middle-text">
+              <h5>Scottsdale</h5>
+              <p>Condo rentals</p>
+            </div>
+            <div class="middle-text">
+              <h5>Ibiza</h5>
+              <p>Apartment rentals</p>
+            </div>
+            <div class="middle-text"><h5>Show more</h5></div>
+          </div>
+        </div>
+        <div class="footer-support-box">
+          <div class="support">
+            <h6>Support</h6>
+            <p>Help Center</p>
+            <p>AirCover</p>
+            <p>Anti-discrimination</p>
+            <p>Disability support</p>
+            <p>Cancellation options</p>
+            <p>Report neighborhood concern</p>
+          </div>
+          <div class="support">
+            <h6>Hosting</h6>
+            <p>Airbnb your home</p>
+            <p>AirCover for Hosts</p>
+            <p>Hosting resources</p>
+            <p>Community forum</p>
+            <p>Hosting responsibly</p>
+            <p>Airbnb-friendly apartment</p>
+            <p>Join a free Hosting class</p>
+          </div>
+          <div class="support">
+            <h6>Airbnb</h6>
+            <p>Newsroom</p>
+            <p>New features</p>
+            <p>Careers</p>
+            <p>Investors</p>
+            <p>Gift cards</p>
+            <p>Airbnb.org emergency stays</p>
+          </div>
+        </div>
+
+        <div class="footer-last-box">
+          <div class="airbnb">
+            <p>2024 Airbnb, Inc.</p>
+            <p>-Terms</p>
+            <p>-Sitemap</p>
+            <p>-Privacy</p>
+            <p>-Your privacy Choices</p>
+          </div>
+          <div class="english">
+            <img src="icons/globe-outline.svg" alt="" />
+            <p>English (US)</p>
+            <p>$ USD</p>
+            
+<i class="fa fa-facebook-square"></i>
+<i class="fa fa-twitter"></i>
+<i class="fa fa-instagram"></i>
+
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <script src="/js/index.js"></script>
+</body>
+</html>
